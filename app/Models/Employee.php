@@ -29,4 +29,13 @@ class Employee extends Model
         'is_verified',
         'verified_at',
     ];
+
+    public function team()
+    {
+        return $this->belongsTo(Team::class);
+    }
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
+    }
 }

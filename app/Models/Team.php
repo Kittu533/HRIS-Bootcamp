@@ -25,6 +25,11 @@ class Team extends Model
     // relation team with company
     public function company()
     {
-        return $this->belongsTo(Employee::class);
+        return $this->belongsTo(Company::class);
+    }
+
+    public function employees()
+    {
+        return $this->hasMany(Employee::class);
     }
 }
